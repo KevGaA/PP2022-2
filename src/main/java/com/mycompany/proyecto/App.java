@@ -10,7 +10,7 @@ import java.io.IOException;
 import static javafx.application.Application.launch;
 
 public class App extends Application {
-
+    //clase principal
     private static Scene scene;
 
     @Override
