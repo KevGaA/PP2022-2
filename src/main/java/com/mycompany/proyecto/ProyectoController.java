@@ -8,7 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 
-
+//clase de controlador
 public class ProyectoController implements Initializable {
 
     @FXML
