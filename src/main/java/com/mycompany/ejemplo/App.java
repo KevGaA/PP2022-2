@@ -22,10 +22,7 @@ public class App extends Application {
         
     }
     
-    public void dibujar(Stage stage){
-        Dibujo d = new Dibujo();
-        d.dibujar(stage);
-    }
+    
 
     static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
