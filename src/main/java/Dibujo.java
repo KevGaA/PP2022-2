@@ -1,4 +1,6 @@
 //kevgaaaaaaa
+
+
 import java.awt.Graphics2D;
 import java.awt.geom.Path2D;
 
@@ -21,6 +23,7 @@ public class Dibujo extends javax.swing.JFrame {
         limpiar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe Script", 0, 18)); // NOI18N
         jLabel1.setText("TRANSFORMADOR DE TEXTO");
@@ -138,6 +141,26 @@ public class Dibujo extends javax.swing.JFrame {
         //validacion de la letra que esta leyendo en el momento el programa
         
         //intentar que las letras minusculas terminen en la altura 70 para que se puedan unir con mas facilidad
+            if ("a".equals(text)){//listo
+                curve.moveTo(0, 200);
+                curve.curveTo(33, 200, 40, 100, 35, 70);
+                
+                curve.moveTo(35, 70);
+                curve.curveTo(15, 100, 15, 150, 30, 180);
+                
+                curve.moveTo(30, 180);
+                curve.curveTo( 30,200, 37, 175,50 , 125);
+                
+                /*
+                curve.moveTo(0, 75);
+                curve.curveTo(15, 70, 15, 70, 25, 50);
+                
+                curve.lineTo(25, 125);
+                curve.curveTo(0, 150, 0, 125, 0, 125);
+                curve.curveTo(0, 110, 0, 100, 40, 70);
+            */
+            }
+            
             if ("j".equals(text)){//listo
                 curve.moveTo(25, 30);
                 curve.curveTo(28, 33, 28, 36, 25, 39);
