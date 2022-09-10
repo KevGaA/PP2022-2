@@ -122,29 +122,25 @@ public class Dibujo extends javax.swing.JFrame {
 
     private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
         String text = palabra.getText();//guarda en una variable de tipo string la palabra ingresada que originalmente es de tipo textfield   
-        //String[] letras = new String[text.length()];
-        if (text==""){
-            System.out.println("No se ha introducido ningun dato, vuelva a intentarlo...");
-        }else if(text!=""){
-            System.out.println("La palabra es: "+text);
-            /*for (int i = 0; i < text.length(); i++) {
-                letras[i]=text.;
-            }*/
-        }
+        System.out.println("La palabra ingresada es: "+text);
     }//GEN-LAST:event_buttonActionPerformed
 
     private void buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseClicked
+        //librerias utilizadas para poder dibujar
         Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
         Path2D.Double curve = new Path2D.Double();
+        
+        //declaracion de variables
         char aux;
         String text = palabra.getText();//convierte la variable de textfield en un string
         int x=0,y=0;//posiciones iniciales
         
         for (int i = 0; i < text.length(); i++) {
+            //guarda en la variable aux letra por letra una variable tipo char la cual luego es modificada por una de tipo string y guardada en la variable letra
             aux = text.charAt(i);
             String letra = Character.toString(aux);
+            
             //validacion de la letra que esta leyendo en el momento el programa
-            //intentar que las letras minusculas terminen en la altura 70 para que se puedan unir con mas facilidad
             if ("j".equals(letra)){//listo
                 curve.moveTo(25, 30);
                 curve.curveTo(28, 33, 28, 36, 25, 39);
@@ -228,100 +224,7 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.curveTo(25, 85, 25, 80, 55, 70);
             }
         }
-        g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz
-        /*
-            Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
-            Path2D.Double curve = new Path2D.Double();
-            //validacion de la letra que esta leyendo en el momento el programa
-        
-            //intentar que las letras minusculas terminen en la altura 70 para que se puedan unir con mas facilidad
-            if ("j".equals(text)){//listo
-                curve.moveTo(25, 30);
-                curve.curveTo(28, 33, 28, 36, 25, 39);
-                curve.curveTo(22, 36, 22, 33, 25, 30);
-
-                curve.moveTo(0, 75);
-                curve.curveTo(15, 70, 15, 70, 25, 50);
-                curve.lineTo(25, 125);
-                curve.curveTo(0, 150, 0, 125, 0, 125);
-                curve.curveTo(0, 110, 0, 100, 40, 70);
-            }
-            if("k".equals(text)){//listo
-                curve.moveTo(0, 70);
-                curve.curveTo(30, 55, 70, 10, 40, 0);
-                curve.curveTo(30, 10, 25, 35, 25, 70);
-                curve.moveTo(25, 50);
-                curve.curveTo(50, 45, 50, 45, 35, 60);
-                curve.curveTo(50, 60, 55, 65, 35, 70);
-                curve.lineTo(60, 70);
-            }
-            if("l".equals(text)){//listo
-                curve.moveTo(0, 70);
-                curve.curveTo(30, 55, 70, 10, 50, 0);
-                curve.curveTo(40, 10, 25, 35, 25, 50);
-                curve.curveTo(30, 65, 35, 65, 55, 70);
-            }
-            if("m".equals(text)){//listo
-                curve.moveTo(0, 45);
-                curve.curveTo(5, 25, 15, 25, 25, 45);
-                curve.lineTo(25, 70);
-                curve.moveTo(25, 45);
-                curve.curveTo(30, 25, 35, 25, 45, 45);
-                curve.lineTo(45, 70);
-                curve.moveTo(45, 45);
-                curve.curveTo(55, 25, 65, 25, 65, 45);
-                curve.lineTo(65, 65);
-                curve.curveTo(67, 70, 69, 70, 70, 70);
-            }
-            if("n".equals(text)){
-                curve.moveTo(0, 45);//listo
-                curve.curveTo(5, 25, 15, 25, 25, 45);
-                curve.lineTo(25, 70);
-                curve.moveTo(25, 45);
-                curve.curveTo(30, 25, 35, 25, 45, 45);
-                curve.curveTo(45, 60, 47, 68, 55, 70);
-            }
-            if("ñ".equals(text)){//listo
-                curve.moveTo(0, 45);
-                curve.curveTo(5, 25, 15, 25, 25, 45);
-                curve.lineTo(25, 70);
-                curve.moveTo(25, 45);
-                curve.curveTo(30, 25, 35, 25, 45, 45);
-                curve.curveTo(45, 60, 47, 68, 55, 70);
-                curve.moveTo(10, 20);
-                curve.curveTo(20, 5, 30, 30, 40, 20);
-            }
-            if("o".equals(text)){//listo //achicar la o y arreglar el tema de la union
-                curve.moveTo(20, 50);
-                curve.curveTo(60, 55, 60, 95, 30, 100);
-                curve.curveTo(0, 95, 0, 55, 30, 50);
-                curve.moveTo(10, 60);
-                curve.curveTo(40, 75, 60, 75, 70, 70);
-            }
-            if("p".equals(text)){//listo //agrandar la letra
-                curve.moveTo(0, 70);
-                curve.curveTo(5, 70, 10, 60, 20, 45);
-                curve.curveTo(35, 55, 35, 65, 20, 70);
-                curve.lineTo(20, 45);
-                curve.lineTo(20, 95);
-                curve.moveTo(20, 70);
-                curve.lineTo(35, 70);
-            }
-            if("q".equals(text)){//listo //achicar un poco mas el circulo
-                curve.moveTo(25, 20);
-                curve.curveTo(50, 25, 50, 65, 25, 70);
-                curve.curveTo(0, 65, 0, 25, 25, 20);
-                curve.moveTo(44, 45);
-                curve.lineTo(44, 105);
-                curve.curveTo(41, 117, 38, 117, 35, 115);
-                curve.moveTo(44, 85);
-                curve.curveTo(25, 85, 25, 80, 55, 70);
-            }else{
-                System.out.println("no a ingresado ningun valor,vuelva a intentarlo...");
-            }
-            g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz
-        
-        */
+        g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz        
     }//GEN-LAST:event_buttonMouseClicked
 
     private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
@@ -329,7 +232,6 @@ public class Dibujo extends javax.swing.JFrame {
     }//GEN-LAST:event_limpiarActionPerformed
 
     private void limpiarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarMouseClicked
-        
         //limpia el panel del dibujo
         jPanel1.updateUI();
     }//GEN-LAST:event_limpiarMouseClicked
