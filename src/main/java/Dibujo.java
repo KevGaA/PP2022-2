@@ -142,23 +142,14 @@ public class Dibujo extends javax.swing.JFrame {
         
         //intentar que las letras minusculas terminen en la altura 70 para que se puedan unir con mas facilidad
             if ("a".equals(text)){//listo
-                curve.moveTo(0, 200);
-                curve.curveTo(33, 200, 40, 100, 35, 70);
-                
-                curve.moveTo(35, 70);
-                curve.curveTo(15, 100, 15, 150, 30, 180);
-                
-                curve.moveTo(30, 180);
-                curve.curveTo( 30,200, 37, 175,50 , 125);
-                
-                /*
-                curve.moveTo(0, 75);
-                curve.curveTo(15, 70, 15, 70, 25, 50);
-                
-                curve.lineTo(25, 125);
-                curve.curveTo(0, 150, 0, 125, 0, 125);
-                curve.curveTo(0, 110, 0, 100, 40, 70);
-            */
+                curve.moveTo(10, 70);
+                curve.curveTo(20, 70, 30, 65, 30, 50);
+                curve.moveTo(30, 50);
+                curve.curveTo(40, 75, 60, 75, 70, 50);
+                curve.moveTo(30, 50);
+                curve.curveTo(40, 20, 60, 20, 70, 50);
+                curve.moveTo(70, 50);
+                curve.curveTo(65, 65, 70, 70, 80, 70);
             }
             
             if ("j".equals(text)){//listo
