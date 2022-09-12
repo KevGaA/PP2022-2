@@ -411,13 +411,13 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.lineTo(10+x, 70);
                 x = x + 30;
             }
-            if("¿".equals(letra)){ //falta punto
+            if("¿".equals(letra)){ //falta punto del signo
                 curve.moveTo(25+x, 30);
                 curve.lineTo(25+x, 65);
                 curve.curveTo(-30+x, 90, 45+x, 140, 45+x, 90);
                 x = x + 50;
             }
-            if("?".equals(letra)){ //falta punto
+            if("?".equals(letra)){ //falta punto del signo
                 curve.moveTo(25+x, 90);
                 curve.lineTo(25+x, 65);
                 curve.curveTo(90+x, 50, 25+x, -20, 5+x, 30);
