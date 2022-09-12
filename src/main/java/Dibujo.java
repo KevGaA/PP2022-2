@@ -198,9 +198,56 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.moveTo(20, 70);
                 curve.curveTo(35, 69, 47, 57, 46, 43);
                 curve.moveTo(46, 43);
-                curve.curveTo(40, 40, 58, 40, 60, 55);
-                
+                curve.curveTo(45, 30, 38, 30, 33, 43);
+                curve.moveTo(33, 43);
+                curve.curveTo(30, 55, 45, 68, 70, 70);    
             }
+            
+            if ("f".equals(text)){//listo
+                curve.moveTo(20, 70);
+                curve.curveTo(35, 65, 43, 50, 43, 33);
+                curve.moveTo(43, 33);
+                curve.curveTo(40, 20, 35, 20, 30, 35);
+                curve.moveTo(30, 35);
+                curve.curveTo(28, 52, 28, 75, 30, 90);
+                curve.moveTo(30, 90);
+                curve.curveTo(32, 98, 38, 98, 40, 90);
+                curve.moveTo(40, 90);
+                curve.curveTo(45, 75, 38, 53, 30, 60);
+                curve.moveTo(30, 60);
+                curve.curveTo(35, 74, 40, 75, 70, 70);
+            }
+            
+            if ("f".equals(text)){//listo
+                curve.moveTo(20, 70);
+                curve.curveTo(35, 65, 43, 50, 43, 33);
+                curve.moveTo(43, 33);
+                curve.curveTo(40, 20, 35, 20, 30, 35);
+                curve.moveTo(30, 35);
+                curve.curveTo(28, 52, 28, 75, 30, 90);
+                curve.moveTo(30, 90);
+                curve.curveTo(32, 98, 38, 98, 40, 90);
+                curve.moveTo(40, 90);
+                curve.curveTo(45, 75, 38, 53, 30, 60);
+                curve.moveTo(30, 60);
+                curve.curveTo(35, 74, 40, 75, 70, 70);
+            }
+            
+            if ("g".equals(text)){//listo
+                curve.moveTo(20, 70);
+                curve.curveTo(30, 73, 36, 78, 35, 55);
+                curve.moveTo(35, 55);
+                curve.curveTo(40, 20, 35, 20, 60, 55);
+                curve.moveTo(30, 35);
+                curve.curveTo(28, 52, 28, 75, 30, 90);
+                curve.moveTo(30, 90);
+                curve.curveTo(32, 98, 38, 98, 40, 90);
+                curve.moveTo(40, 90);
+                curve.curveTo(45, 75, 38, 53, 30, 60);
+                curve.moveTo(30, 60);
+                curve.curveTo(35, 74, 40, 75, 70, 70);
+            }
+            
             
             if ("j".equals(text)){//listo
                 curve.moveTo(25, 30);
