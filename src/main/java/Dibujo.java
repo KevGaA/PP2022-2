@@ -219,7 +219,7 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.curveTo(15+x, 74, 20+x, 75, 50+x, 70);
                 x=x+50;
             }
-
+            //letra no completada
             /*if ("g".equals(letra)){//listo
                 curve.moveTo(0, 70);
                 curve.curveTo(10, 73, 16, 78, 15, 55);
