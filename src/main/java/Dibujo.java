@@ -382,6 +382,21 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.lineTo(30+x, 50);
                 x = x + 40;
             }
+            if("_".equals(letra)){
+                curve.moveTo(10+x, 70);
+                curve.lineTo(30+x, 70);
+                x = x + 40;
+            }
+            if("(".equals(letra)){
+                curve.moveTo(15+x, 0);
+                curve.curveTo(5+x, 0, 5+x, 70, 15+x, 70);
+                x = x + 30;
+            }
+            if(")".equals(letra)){
+                curve.moveTo(15+x, 0);
+                curve.curveTo(25+x, 0, 25+x, 70, 15+x, 70);
+                x = x + 30;
+            }
         }
         
         g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz        
