@@ -233,6 +233,7 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.curveTo(35, 74, 40, 75, 70, 70);
             }
             
+            //letra G
             if ("g".equals(text)){//listo
                 curve.moveTo(20, 70);
                 curve.curveTo(30, 73, 36, 78, 35, 55);
