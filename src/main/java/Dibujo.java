@@ -398,18 +398,24 @@ public class Dibujo extends javax.swing.JFrame {
                 x = x + 30;
             }
             if("[".equals(letra)){
-                curve.moveTo(15+x, 0);
-                curve.lineTo(0+x, 0);
-                curve.lineTo(0+x, 70);
-                curve.lineTo(15+x, 70);
-                x = x + 25;
+                curve.moveTo(25+x, 0);
+                curve.lineTo(10+x, 0);
+                curve.lineTo(10+x, 70);
+                curve.lineTo(25+x, 70);
+                x = x + 30;
             } 
             if("]".equals(letra)){
-                curve.moveTo(0+x, 0);
-                curve.lineTo(15+x, 0);
-                curve.lineTo(15+x, 70);
-                curve.lineTo(0+x, 70);
-                x = x + 25;
+                curve.moveTo(10+x, 0);
+                curve.lineTo(25+x, 0);
+                curve.lineTo(25+x, 70);
+                curve.lineTo(10+x, 70);
+                x = x + 30;
+            }
+            if("¿".equals(letra)){ //falta punto
+                curve.moveTo(25+x, 30);
+                curve.lineTo(25+x, 65);
+                curve.curveTo(-30+x, 90, 45+x, 140, 45+x, 90);
+                x = x + 50;
             }
         }
         
