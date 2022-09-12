@@ -232,6 +232,9 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.curveTo(25+x, 85, 25+x, 80, 55+x, 70);
                 x = x + 55;
             }
+            if (" ".equals(letra)){//reconoce los espacios para hacer un salto entre letras
+                x = x + 50;
+            }
         }
         
         g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz        
