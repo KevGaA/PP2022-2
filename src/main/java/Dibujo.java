@@ -239,6 +239,7 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.curveTo(25+x, 35, 25+x, 65, 30+x, 70);
                 x = x + 30;
             }
+            
             if("s".equals(letra)){
                 curve.moveTo(0+x, 70);
                 curve.curveTo(15+x, 70, 25+x, 30, 20+x, 30);
@@ -300,6 +301,18 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.curveTo(10+x, 100, 30+x, 80, 40+x, 70);
                 x = x + 40;
             }
+            
+            //MAYUSCULAS
+            if("R".equals(letra)){
+                curve.moveTo(0+x, 70);
+                curve.curveTo(20+x, 70, 5+x, 0, 5+x, 10);
+                curve.moveTo(-20+x, 10);
+                curve.curveTo(50+x, 0, 50+x, 35, 11+x, 40);
+                curve.moveTo(11+x, 40);
+                curve.curveTo(45+x, 45, 20+x, 70, 45+x, 70);
+                x = x + 45;
+            }
+            
         }
         
         g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz        
