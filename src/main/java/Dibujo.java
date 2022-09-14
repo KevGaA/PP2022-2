@@ -329,24 +329,47 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.curveTo(25+x, 85, 25+x, 80, 55+x, 70);
                 x = x + 55;
             }
-            if ("P".equals(letra)){//P mayuscula
-                curve.moveTo(5, 15);
-                curve.curveTo(10,15 , 25,10, 20,7);
-                curve.curveTo(12, 5, 8, 10, 20, 10);
-                curve.curveTo(45, 10, 45, 35, 20, 40);
-                curve.lineTo(20, 7);
-                curve.lineTo(20, 70);
-                curve.curveTo(25, 70, 30, 75, 45, 70);
+            if ("J".equals(letra)){//Dibujar J
+                curve.moveTo(0+x, 20);
+                curve.curveTo(20+x, 5, 40+x, 30, 60+x, 20);
+                curve.curveTo(60+x, 15, 50+x, 5, 30+x, 20);
+                curve.curveTo(30+x, 20, 50+x, 50, 40+x, 80);
+                curve.curveTo(10+x, 80, 0+x, 70, 60+x, 70);
                 g2d.draw(curve);
+                x=x+60;
             }
-            if ("L".equals(letra)){//L mayuscula
-                curve.moveTo(0, 10);
-                curve.curveTo(10, 15, 25, 10, 25, 5);
-                curve.curveTo(15, 0, 12, 10, 20, 10);
-                curve.lineTo(20, 65);
-                curve.curveTo(20, 70, 0, 75, 15, 60);
-                curve.curveTo(25, 60, 25, 75, 40, 70);
+            if ("K".equals(letra)) {
+                curve.moveTo(0+x, 10);
+                curve.curveTo(0+x, 10, 6+x, 5, 10+x, 10);
+                curve.lineTo(10+x, 70);
+                curve.moveTo(40+x, 10);
+                curve.curveTo(35+x, 5, 20+x, 30, 10+x, 30);
+                curve.curveTo(10+x, 50, 30+x, 45, 35+x, 65);
+                curve.curveTo(35+x, 65, 37+x, 70, 45+x, 70);
                 g2d.draw(curve);
+                x=x+45;
+            }
+            
+            if ("L".equals(letra)){//L mayuscula
+                curve.moveTo(0+x, 10);
+                curve.curveTo(10+x, 15, 25+x, 10, 25+x, 5);
+                curve.curveTo(15+x, 0, 12+x, 10, 20+x, 10);
+                curve.lineTo(20+x, 65);
+                curve.curveTo(20+x, 70, 0+x, 75, 15+x, 60);
+                curve.curveTo(25+x, 60, 25+x, 75, 40+x, 70);
+                g2d.draw(curve);
+                x=x+40;
+            }
+            if ("P".equals(letra)) {
+                curve.moveTo(5+x, 15);
+                curve.curveTo(10+x,15 , 25+x,10, 20+x,7);
+                curve.curveTo(12+x, 5, 8+x, 10, 20+x, 10);
+                curve.curveTo(45+x, 10, 45+x, 35, 20+x, 40);
+                curve.lineTo(20+x, 7);
+                curve.lineTo(20+x, 70);
+                curve.curveTo(25+x, 70, 30+x, 75, 45+x, 70);
+                g2d.draw(curve);
+                x=x+45;
             }
              
             if("r".equals(letra)){
