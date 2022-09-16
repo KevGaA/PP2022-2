@@ -250,82 +250,97 @@ public class Dibujo extends javax.swing.JFrame {
             }
             if("k".equals(letra)){//listo
                 curve.moveTo(0+x, 70);
-                curve.curveTo(30+x, 55, 70+x, 10, 40+x, 0);
-                curve.curveTo(30+x, 10, 25+x, 35, 25+x, 70);
-                curve.moveTo(25+x, 50);
-                curve.curveTo(50+x, 45, 50+x, 45, 35+x, 60);
-                curve.curveTo(50+x, 60, 55+x, 65, 35+x, 70);
-                curve.lineTo(60+x, 70);
-                x = x + 60;
+                curve.curveTo(25+x, 65, 25+x, 20, 20+x,15 );
+                curve.curveTo(5+x, 20, 5+x, 65, 15+x, 60);
+                curve.curveTo(30+x, 61, 30+x, 64, 15+x, 65);
+                curve.curveTo(30+x, 66, 30+x, 69, 15+x, 70);
+                curve.curveTo(20+x, 70, 30+x, 70, 35+x, 70);
+                x = x + 35;
             }
             if("l".equals(letra)){//listo
                 curve.moveTo(0+x, 70);
-                curve.curveTo(30+x, 55, 70+x, 10, 50+x, 0);
-                curve.curveTo(40+x, 10, 25+x, 35, 25+x, 50);
-                curve.curveTo(30+x, 65, 35+x, 65, 55+x, 70);
-                x = x + 55; 
+                curve.curveTo(25+x, 65, 25+x, 20, 20+x,15);
+                curve.curveTo(5+x, 20, 5+x, 65, 35+x, 70);
+                x = x + 35; 
             }
             if("m".equals(letra)){//listo
-                curve.moveTo(0+x, 45);
-                curve.curveTo(5+x, 25, 15+x, 25, 25+x, 45);
+                curve.moveTo(0+x, 70);
+                curve.curveTo(2+x, 70, 8+x, 70, 10+x, 64);
+                curve.lineTo(10+x, 40);
+                curve.curveTo(15+x, 35, 20+x, 35, 25+x, 40);
                 curve.lineTo(25+x, 70);
-                curve.moveTo(25+x, 45);
-                curve.curveTo(30+x, 25, 35+x, 25, 45+x, 45);
-                curve.lineTo(45+x, 70);
-                curve.moveTo(45+x, 45);
-                curve.curveTo(55+x, 25, 65+x, 25, 65+x, 45);
-                curve.lineTo(65+x, 65);
-                curve.curveTo(67+x, 70, 69+x, 70, 70+x, 70);
-                x = x + 70;
+                curve.moveTo(25+x, 40);
+                curve.curveTo(30+x, 35, 35+x, 35, 40+x, 40);
+                curve.lineTo(40+x, 70);
+                curve.moveTo(40+x, 40);
+                curve.curveTo(45+x, 35, 45+x, 35, 55+x, 40);
+                curve.lineTo(55+x, 64);
+                curve.curveTo(53+x, 70, 62+x, 70, 65+x, 70);
+                g2d.draw(curve);
+                x = x + 65;
             }
             if("n".equals(letra)){
-                curve.moveTo(0+x, 45);//listo
-                curve.curveTo(5+x, 25, 15+x, 25, 25+x, 45);
+                curve.moveTo(0+x, 70);
+                curve.curveTo(2+x, 70, 8+x, 70, 10+x, 64);
+                curve.lineTo(10+x, 40);
+                curve.curveTo(15+x, 35, 20+x, 35, 25+x, 40);
                 curve.lineTo(25+x, 70);
-                curve.moveTo(25+x, 45);
-                curve.curveTo(30+x, 25, 35+x, 25, 45+x, 45);
-                curve.curveTo(45+x, 60, 47+x, 68, 55+x, 70);
-                x = x +55;
+                curve.moveTo(25+x, 40);
+                curve.curveTo(30+x, 35, 35+x, 35, 40+x, 40);
+                curve.lineTo(40+x, 64);
+                curve.curveTo(43+x, 70, 47+x, 70, 50+x, 70);
+                g2d.draw(curve);
+                x = x +50;
             }
             if("ñ".equals(letra)){//listo
-                curve.moveTo(0+x, 45);
-                curve.curveTo(5+x, 25, 15+x, 25, 25+x, 45);
-                curve.lineTo(25+x, 70);
-                curve.moveTo(25+x, 45);
-                curve.curveTo(30+x, 25, 35+x, 25, 45+x, 45);
-                curve.curveTo(45+x, 60, 47+x, 68, 55+x, 70);
-                curve.moveTo(10+x, 20);
-                curve.curveTo(20+x, 5, 30+x, 30, 40+x, 20);
-                x = x + 55;
-            }
-            if("o".equals(letra)){//listo //achicar la o y arreglar el tema de la union
-                curve.moveTo(20+x, 50);
-                curve.curveTo(60+x, 55, 60+x, 95, 30+x, 100);
-                curve.curveTo(0+x, 95, 0+x, 55, 30+x, 50);
-                curve.moveTo(10+x, 60);
-                curve.curveTo(40+x, 75, 60+x, 75, 70+x, 70);
-                x = x + 70;
-            }
-            if("p".equals(letra)){//listo //agrandar la letra
                 curve.moveTo(0+x, 70);
-                curve.curveTo(5+x, 70, 10+x, 60, 20+x, 45);
-                curve.curveTo(35+x, 55, 35+x, 65, 20+x, 70);
-                curve.lineTo(20+x, 45);
-                curve.lineTo(20+x, 95);
+                curve.curveTo(2+x, 70, 8+x, 70, 10+x, 64);
+                curve.lineTo(10+x, 40);
+                curve.curveTo(15+x, 35, 20+x, 35, 25+x, 40);
+                curve.lineTo(25+x, 70);
+                curve.moveTo(25+x, 40);
+                curve.curveTo(30+x, 35, 35+x, 35, 40+x, 40);
+                curve.lineTo(40+x, 64);
+                curve.curveTo(43+x, 70, 47+x, 70, 50+x, 70);
+                
+                curve.moveTo(15+x, 30);
+                curve.curveTo(20+x, 25, 30+x, 35, 35+x, 30);
+                x = x + 50;
+            }
+            if("o".equals(letra)){//listo
+                curve.moveTo(0+x, 70);
+                curve.curveTo(4+x, 70, 8+x, 70, 13+x, 64);
+                curve.moveTo(25+x, 40);
+                curve.curveTo(5+x, 45, 5+x, 65, 25+x, 70);
+                curve.curveTo(45+x, 65, 45+x, 45, 25+x, 40);
+                curve.moveTo(13+x, 46);
+                curve.curveTo(18+x, 50, 40+x, 50, 45+x, 45);
+                curve.moveTo(37+x, 64);
+                curve.curveTo(42+x, 70, 46+x, 70, 50+x, 70);
+                g2d.draw(curve);
+                x = x + 50;
+            }
+            if("p".equals(letra)){//listo
+                curve.moveTo(0+x, 70);
+                curve.curveTo(5+x, 75, 17+x, 47, 20+x, 40);
+                curve.curveTo(45+x, 45, 45+x, 65, 20+x, 70);
+                curve.lineTo(20+x, 40);
+                curve.lineTo(20+x, 90);
                 curve.moveTo(20+x, 70);
-                curve.lineTo(35+x, 70);
-                x = x +35;
+                curve.curveTo(25+x, 72, 40+x, 72, 45+x, 70);
+                x = x +45;
             }
             if("q".equals(letra)){//listo //achicar un poco mas el circulo
-                curve.moveTo(25+x, 20);
-                curve.curveTo(50+x, 25, 50+x, 65, 25+x, 70);
-                curve.curveTo(0+x, 65, 0+x, 25, 25+x, 20);
-                curve.moveTo(44+x, 45);
-                curve.lineTo(44+x, 105);
-                curve.curveTo(41+x, 117, 38+x, 117, 35+x, 115);
-                curve.moveTo(44+x, 85);
-                curve.curveTo(25+x, 85, 25+x, 80, 55+x, 70);
-                x = x + 55;
+                curve.moveTo(0+x, 70);
+                curve.curveTo(4+x, 70, 8+x, 70, 10+x, 64);
+                curve.moveTo(20+x, 40);
+                curve.curveTo(0+x, 45, 0+x, 65, 20+x, 70);
+                curve.curveTo(40+x, 65, 40+x, 45, 20+x, 40);
+                curve.moveTo(35+x, 55);
+                curve.lineTo(35+x, 90);
+                curve.moveTo(35+x, 70);
+                curve.curveTo(20+x, 85, 20+x, 60, 45+x, 70);
+                x = x + 45;
             }
             if ("J".equals(letra)){//Dibujar J
                 curve.moveTo(0+x, 20);
