@@ -49,7 +49,7 @@ public class Dibujo extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 973, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,32 +74,30 @@ public class Dibujo extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 249, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(button)
-                                .addGap(206, 206, 206))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(349, 349, 349))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(252, 252, 252))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(limpiar)
-                                .addGap(365, 365, 365))))
+                        .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(button))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(jLabel2)
+                        .addGap(143, 143, 143))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(46, 46, 46))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(limpiar)
+                        .addGap(159, 159, 159)))
+                .addGap(298, 298, 298))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(43, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(limpiar)
@@ -333,43 +331,105 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.moveTo(0+x, 20);
                 curve.curveTo(20+x, 5, 40+x, 30, 60+x, 20);
                 curve.curveTo(60+x, 15, 50+x, 5, 30+x, 20);
-                curve.curveTo(30+x, 20, 50+x, 50, 40+x, 80);
-                curve.curveTo(10+x, 80, 0+x, 70, 60+x, 70);
+                curve.curveTo(30+x, 20, 50+x, 50, 40+x, 90);
+                curve.curveTo(10+x, 90, 0+x, 70, 60+x, 70);
                 g2d.draw(curve);
                 x=x+60;
             }
             if ("K".equals(letra)) {
                 curve.moveTo(0+x, 10);
-                curve.curveTo(0+x, 10, 6+x, 5, 10+x, 10);
+                curve.curveTo(0+x, 10, 6+x, 7, 10+x, 10);
                 curve.lineTo(10+x, 70);
+                curve.curveTo(7+x, 70, 5+x, 70, 0+x, 65);
                 curve.moveTo(40+x, 10);
-                curve.curveTo(35+x, 5, 20+x, 30, 10+x, 30);
-                curve.curveTo(10+x, 50, 30+x, 45, 35+x, 65);
-                curve.curveTo(35+x, 65, 37+x, 70, 45+x, 70);
+                curve.curveTo(30+x, 5, 20+x, 30, 10+x, 30);
+                curve.curveTo(10+x, 50, 25+x, 45, 30+x, 65);
+                curve.curveTo(30+x, 65, 32+x, 70, 40+x, 70);
                 g2d.draw(curve);
                 x=x+45;
             }
             
             if ("L".equals(letra)){//L mayuscula
-                curve.moveTo(0+x, 10);
-                curve.curveTo(10+x, 15, 25+x, 10, 25+x, 5);
-                curve.curveTo(15+x, 0, 12+x, 10, 20+x, 10);
-                curve.lineTo(20+x, 65);
-                curve.curveTo(20+x, 70, 0+x, 75, 15+x, 60);
-                curve.curveTo(25+x, 60, 25+x, 75, 40+x, 70);
+                curve.moveTo(25+x, 10);
+                curve.curveTo(20+x, 0, 5+x, 0, 0+x, 10);
+                curve.curveTo(0+x, 15, 8+x, 40, 5+x, 65);
+                curve.curveTo(0+x, 80, 0+x, 40, 5+x, 65);
+                curve.curveTo(5+x, 65, 15+x, 75, 30+x, 70);
                 g2d.draw(curve);
-                x=x+40;
+                x=x+30;
             }
+            if ("M".equals(letra)) {
+                curve.moveTo(0+x, 30);
+                curve.curveTo(5+x, 0, 20+x, 0, 25+x, 30);
+                curve.lineTo(25+x, 70);
+                curve.moveTo(25+x, 30);
+                curve.curveTo(30+x, 0, 45+x, 0, 50+x, 30);
+                curve.lineTo(50+x,70);
+                curve.moveTo(50+x, 30);
+                curve.curveTo(55+x, 0, 70+x, 0, 75+x, 30);
+                curve.lineTo(75+x, 65);
+                curve.curveTo(77+x, 70, 80+x, 70, 85+x, 70);
+                g2d.draw(curve);
+                x=x+85;
+            }
+            if ("N".equals(letra)) {
+                curve.moveTo(0+x, 30);
+                curve.curveTo(5+x, 0, 20+x, 0, 25+x, 30);
+                curve.lineTo(25+x, 70);
+                curve.moveTo(25+x, 30);
+                curve.curveTo(30+x, 0, 45+x, 0, 50+x, 30);
+                curve.lineTo(50+x,65);
+                curve.curveTo(53+x, 70, 57+x, 70, 60+x, 70);
+                g2d.draw(curve);
+                x=x+60;
+            }
+            if ("Ñ".equals(letra)) {
+                curve.moveTo(0+x, 30);
+                curve.curveTo(5+x, 0, 20+x, 0, 25+x, 30);
+                curve.lineTo(25+x, 70);
+                curve.moveTo(25+x, 30);
+                curve.curveTo(30+x, 0, 45+x, 0, 50+x, 30);
+                curve.lineTo(50+x,65);
+                curve.curveTo(53+x, 70, 57+x, 70, 60+x, 70);
+                
+                curve.moveTo(10+x, 3);
+                curve.curveTo(20+x, -2, 30+x, 8, 40+x, 3);
+                g2d.draw(curve);
+                x=x+60;
+            }
+            if ("O".equals(letra)) {
+                curve.moveTo(40+x, 0);
+                curve.curveTo(0+x, 5, 0+x, 65, 40+x, 70);
+                curve.curveTo(80+x, 65, 80+x, 5, 40+x, 0);
+                curve.moveTo(18+x, 14);
+                curve.curveTo(40+x, 20, 60+x, 20, 80+x, 10);
+                curve.moveTo(65+x, 56);
+                curve.curveTo(70+x, 65, 75+x, 70, 80+x, 70);
+                g2d.draw(curve);
+                x=x+80;
+            }
+            
             if ("P".equals(letra)) {
                 curve.moveTo(5+x, 15);
                 curve.curveTo(10+x,15 , 25+x,10, 20+x,7);
                 curve.curveTo(12+x, 5, 8+x, 10, 20+x, 10);
-                curve.curveTo(45+x, 10, 45+x, 35, 20+x, 40);
+                curve.curveTo(50+x, 12, 50+x, 38, 20+x, 40);
                 curve.lineTo(20+x, 7);
                 curve.lineTo(20+x, 70);
                 curve.curveTo(25+x, 70, 30+x, 75, 45+x, 70);
                 g2d.draw(curve);
                 x=x+45;
+            }
+            if ("Q".equals(letra)) {
+                curve.moveTo(40+x, 0);
+                curve.curveTo(0+x, 5, 0+x, 65, 40+x, 70);
+                curve.curveTo(80+x, 65, 80+x, 5, 40+x, 0);
+                curve.moveTo(18+x, 14);
+                curve.curveTo(20+x, 30, 20+x, 50, 25+x, 50);
+                curve.curveTo(35+x, 40, 55+x, 40, 65+x, 56);
+                curve.curveTo(70+x, 65, 75+x, 70, 80+x, 70);
+                g2d.draw(curve);
+                x=x+80;
             }
              
             if("r".equals(letra)){
