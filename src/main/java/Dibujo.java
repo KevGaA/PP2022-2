@@ -238,15 +238,35 @@ public class Dibujo extends javax.swing.JFrame {
                 curve.moveTo(20, 70);
                 curve.curveTo(30, 73, 36, 78, 35, 55);
                 curve.moveTo(35, 55);
-                curve.curveTo(40, 20, 35, 20, 60, 55);
-                curve.moveTo(30, 35);
-                curve.curveTo(28, 52, 28, 75, 30, 90);
-                curve.moveTo(30, 90);
-                curve.curveTo(32, 98, 38, 98, 40, 90);
-                curve.moveTo(40, 90);
-                curve.curveTo(45, 75, 38, 53, 30, 60);
-                curve.moveTo(30, 60);
-                curve.curveTo(35, 74, 40, 75, 70, 70);
+                curve.curveTo(45, 40, 55, 40,60 , 55);
+                curve.moveTo(60, 55);
+                curve.curveTo(55, 75, 45, 75, 35, 55);
+                curve.moveTo(60, 55);
+                curve.lineTo(60, 90);
+                curve.moveTo(60, 90);
+                curve.curveTo(60, 105, 45, 120, 30, 100);
+                curve.moveTo(30, 100);
+                curve.curveTo(45, 82, 55, 75, 70, 70);
+            }
+            if ("h".equals(text)){//listo
+                curve.moveTo(20, 70);
+                curve.curveTo(35, 60, 48, 42, 50, 28);
+                curve.moveTo(35, 28);
+                curve.lineTo(35 , 70);
+                curve.moveTo(50, 28);
+                curve.curveTo(45, 12, 42, 12, 35, 28);
+                curve.moveTo(35, 70);
+                curve.curveTo(35, 48, 52, 48, 55, 62);
+                curve.moveTo(55, 62);
+                curve.curveTo(55, 72, 60, 75, 70, 70);
+            }
+            
+            if ("i".equals(text)){//listo
+                curve.moveTo(20, 70);
+                curve.curveTo(38, 65, 45, 58, 45, 30);
+                curve.moveTo(45, 30);
+                curve.curveTo(38, 52, 45, 68, 70, 70);
+                
             }
             
             
