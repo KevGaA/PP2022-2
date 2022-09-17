@@ -1,4 +1,5 @@
 //git
+import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Path2D;
 
@@ -129,6 +130,7 @@ public class Dibujo extends javax.swing.JFrame {
         //librerias utilizadas para poder dibujar
         Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
         Path2D.Double curve = new Path2D.Double();
+        g2d.setColor(Color. RED);
         
         //declaracion de variables
         char aux;
