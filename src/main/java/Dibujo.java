@@ -220,21 +220,40 @@ public class Dibujo extends javax.swing.JFrame {
                 x=x+50;
             }
 
-            /*if ("g".equals(letra)){//listo
-                curve.moveTo(0, 70);
-                curve.curveTo(10, 73, 16, 78, 15, 55);
-                curve.moveTo(15, 55);
-                curve.curveTo(20, 20, 15, 20, 40, 55);
-                curve.moveTo(10, 35);
-                curve.curveTo(8, 52, 8, 75, 10, 90);
-                curve.moveTo(10, 90);
-                curve.curveTo(12, 98, 18, 98, 20, 90);
-                curve.moveTo(20, 90);
-                curve.curveTo(25, 75, 18, 53, 10, 60);
-                curve.moveTo(10, 60);
-                curve.curveTo(15, 74, 20, 75, 50, 70);
-                x=x+50;
-            }*/
+            if ("g".equals(text)){//listo
+                curve.moveTo(20+x, 70);
+                curve.curveTo(30+x, 73, 36+x, 78, 35+x, 55);
+                curve.moveTo(35+x, 55);
+                curve.curveTo(45+x, 40, 55+x, 40,60+x , 55);
+                curve.moveTo(60+x, 55);
+                curve.curveTo(55+x, 75, 45+x, 75, 35+x, 55);
+                curve.moveTo(60+x, 55);
+                curve.lineTo(60+x, 90);
+                curve.moveTo(60+x, 90);
+                curve.curveTo(60+x, 105, 45+x, 120, 30+x, 100);
+                curve.moveTo(30+x, 100);
+                curve.curveTo(45+x, 82, 55+x, 75, 70+x, 70);
+            }
+            if ("h".equals(text)){//listo
+                curve.moveTo(20+x, 70);
+                curve.curveTo(35+x, 60, 48+x, 42, 50+x, 28);
+                curve.moveTo(35+x, 28);
+                curve.lineTo(35+x , 70);
+                curve.moveTo(50+x, 28);
+                curve.curveTo(45+x, 12, 42+x, 12, 35+x, 28);
+                curve.moveTo(35+x, 70);
+                curve.curveTo(35+x, 48, 52+x, 48, 55+x, 62);
+                curve.moveTo(55+x, 62);
+                curve.curveTo(55+x, 72, 60+x, 75, 70+x, 70);
+            }
+            
+            if ("i".equals(text)){//listo
+                curve.moveTo(20+x, 70);
+                curve.curveTo(38+x, 65, 45+x, 58, 45+x, 30);
+                curve.moveTo(45+x, 30);
+                curve.curveTo(38+x, 52, 45+x, 68, 70+x, 70);
+                
+            }
             
             
             //validacion de la letra que esta leyendo en el momento el programa
