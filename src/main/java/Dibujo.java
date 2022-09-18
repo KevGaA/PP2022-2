@@ -433,6 +433,99 @@ public class Dibujo extends javax.swing.JFrame {
                 }
 
                 //MAYUSCULAS
+                
+                if ("A".equals(letra)){//Dibujar A
+                    curve.moveTo(20,70);
+                    curve.lineTo(45,0);
+                    curve.moveTo(45,0);
+                    curve.lineTo(70,70);
+                    curve.curveTo(90,65,90,45,70,35);
+                    curve.moveTo(70,35);
+                    curve.curveTo(55,30,35,40,20,48);
+                    curve.moveTo(20,48);
+                    curve.curveTo(9,48,3,32,12,20);
+                    
+                }
+                if ("B".equals(letra)){//Dibujar B
+                    curve.moveTo(20,70);
+                    curve.lineTo(20,0);
+                    curve.moveTo(20,0);
+                    curve.curveTo(75,5,75,25,20,35);
+                    curve.moveTo(20,35);
+                    curve.curveTo(75,45,75,65,20,70);
+                    curve.moveTo(20,70);
+                    curve.curveTo(0,65,0,55,20,50);
+                    curve.moveTo(20,50);
+                    curve.curveTo(38,58,50,68,70,70);  
+                }
+                
+                if ("C".equals(letra)){//Dibujar C
+                    curve.moveTo(30,0);
+                    curve.curveTo(72,16,78,10,50,5);
+                    curve.moveTo(50,5);
+                    curve.curveTo(0,18,0,48,50,70);
+                    curve.moveTo(50,70);
+                    curve.lineTo(70,70);
+                }
+                if ("D".equals(letra)){//Dibujar D
+                    curve.moveTo(30,0);
+                    curve.curveTo(22,18,28,55,20,70);
+                    curve.moveTo(20,70);
+                    curve.curveTo(2,62,10,50,35,70);
+                    curve.moveTo(35,70);
+                    curve.curveTo(90,48,90,28,30,0);
+                    curve.moveTo(30,0);
+                    curve.curveTo(5,5,9,24,20,10);  
+                }
+                
+                if ("E".equals(letra)){//Dibujar D
+                    curve.moveTo(60,0);
+                    curve.curveTo(48,8,53,19,60,9);
+                    curve.moveTo(60,9);
+                    curve.curveTo(30,0,15,23,50,35);
+                    curve.moveTo(50,35);
+                    curve.curveTo(18,42,20,65,70,70);  
+                }
+                
+                if ("F".equals(letra)){//Dibujar F
+                    curve.moveTo(80,0);
+                    curve.curveTo(63,9,27,2,10,10);
+                    curve.moveTo(10,10);
+                    curve.curveTo(5,25,12,28,20,18);
+                    curve.moveTo(40,10);
+                    curve.curveTo(30,30,30,65,25,80);
+                    curve.moveTo(25,80);
+                    curve.curveTo(12,90,8,68,20,60);  
+                    curve.moveTo(25,42);
+                    curve.lineTo(42,42);
+                    curve.moveTo(42,40);
+                    curve.lineTo(42,42);
+                }
+                if ("H".equals(letra)){//Dibujar H
+                    curve.moveTo(30,0);
+                    curve.lineTo(32,70);
+                    curve.moveTo(60,0);
+                    curve.lineTo(62,70);
+                    curve.moveTo(60,70);
+                    curve.curveTo(70,80,89,55,80,38);
+                    curve.moveTo(80,38);
+                    curve.curveTo(65,32,38,45,18,43);  
+                    curve.moveTo(18,43);
+                    curve.curveTo(9,35,12,12,25,23); 
+                }
+                if ("I".equals(letra)){//Dibujar i
+                    curve.moveTo(20,5);
+                    curve.curveTo(32,2,50,10,60,9);
+                    curve.moveTo(60,9);
+                    curve.curveTo(70,8,68,1,60,0);  
+                    curve.moveTo(60,0);
+                    curve.curveTo(45,4,45,48,40,60); 
+                    curve.moveTo(40,60);
+                    curve.curveTo(33,75,23,73,25,64); 
+                    curve.moveTo(25,64);
+                    curve.curveTo(41,68,59,70,70,70); 
+                }
+                
 
 
                 if ("J".equals(letra)){//Dibujar J
