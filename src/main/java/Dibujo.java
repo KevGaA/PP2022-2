@@ -192,13 +192,12 @@ public class Dibujo extends javax.swing.JFrame {
 
     private void buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseClicked
         //librerias utilizadas para poder dibujar
-        
-        
-        
         Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
         Path2D.Double curve = new Path2D.Double();
         g2d.setColor(Color.BLACK);
         
+        
+        //implementacion colores en los dibujos 
         if(Rojo.isSelected()){
             g2d.setColor(Color.RED);
         }
