@@ -20,9 +20,16 @@ public class Dibujo extends javax.swing.JFrame {
         button = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         limpiar = new javax.swing.JButton();
+        Rojo = new javax.swing.JCheckBox();
+        Azul = new javax.swing.JCheckBox();
+        Verde = new javax.swing.JCheckBox();
+        morado = new javax.swing.JCheckBox();
+        Cian = new javax.swing.JCheckBox();
+        Amarillo = new javax.swing.JCheckBox();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        cafe = new javax.swing.JCheckBox();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,16 +79,23 @@ public class Dibujo extends javax.swing.JFrame {
             }
         });
 
+        Rojo.setText("Rojo");
+
+        Azul.setText("Azul");
+
+        Verde.setText("Verde");
+
+        morado.setText("Morado");
+
+        Cian.setText("Cian");
+
+        Amarillo.setText("Amarillo");
+
+        jCheckBox1.setText("Negro");
+
+        cafe.setText("Naranjo");
+
         jMenu1.setText("Colores");
-
-        jMenuItem1.setText("Rojo");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
-            }
-        });
-        jMenu1.add(jMenuItem1);
-
         jMenuBar1.add(jMenu1);
 
         setJMenuBar(jMenuBar1);
@@ -93,24 +107,41 @@ public class Dibujo extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 249, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(63, 63, 63)
+                                .addComponent(jLabel2))
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(button)
-                                .addGap(206, 206, 206))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(349, 349, 349))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(252, 252, 252))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(limpiar)
-                                .addGap(365, 365, 365))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(limpiar)))
+                        .addGap(111, 111, 111)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(Verde)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(Amarillo))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Azul)
+                                    .addComponent(jCheckBox1))
+                                .addGap(3, 3, 3)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Rojo)
+                                    .addComponent(Cian))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(morado)
+                                    .addComponent(cafe))))
+                        .addContainerGap(73, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
@@ -119,16 +150,32 @@ public class Dibujo extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(limpiar)
-                .addGap(7, 7, 7)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(41, 41, 41)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(button)
-                    .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(button)
+                                .addComponent(limpiar))
+                            .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jCheckBox1)
+                            .addComponent(morado)
+                            .addComponent(Rojo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Azul)
+                            .addComponent(Cian)
+                            .addComponent(cafe))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Verde)
+                            .addComponent(Amarillo))))
                 .addContainerGap())
         );
 
@@ -145,10 +192,35 @@ public class Dibujo extends javax.swing.JFrame {
 
     private void buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseClicked
         //librerias utilizadas para poder dibujar
+        
+        
+        
         Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
         Path2D.Double curve = new Path2D.Double();
-        g2d.setColor(Color.BLACK); 
-       
+        g2d.setColor(Color.BLACK);
+        
+        if(Rojo.isSelected()){
+            g2d.setColor(Color.RED);
+        }
+        if(Azul.isSelected()){
+            g2d.setColor(Color.BLUE);
+        }
+        if(Verde.isSelected()){
+            g2d.setColor(Color.GREEN);
+        }
+        if(morado.isSelected()){
+            g2d.setColor(Color.magenta);
+        }
+        if(Cian.isSelected()){
+            g2d.setColor(Color.CYAN);
+        }
+        if(Amarillo.isSelected()){
+            g2d.setColor(Color.yellow);
+        }
+        if(cafe.isSelected()){
+            g2d.setColor(Color.ORANGE);
+        }
+        
         //declaracion de variables
         char aux;
         String text = palabra.getText();//convierte la variable de textfield en un string
@@ -801,10 +873,6 @@ public class Dibujo extends javax.swing.JFrame {
         jPanel1.updateUI();
     }//GEN-LAST:event_limpiarMouseClicked
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-         int color=0;
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
-
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -816,14 +884,21 @@ public class Dibujo extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox Amarillo;
+    private javax.swing.JCheckBox Azul;
+    private javax.swing.JCheckBox Cian;
+    private javax.swing.JCheckBox Rojo;
+    private javax.swing.JCheckBox Verde;
     private javax.swing.JButton button;
+    private javax.swing.JCheckBox cafe;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton limpiar;
+    private javax.swing.JCheckBox morado;
     private javax.swing.JTextField palabra;
     // End of variables declaration//GEN-END:variables
 }
