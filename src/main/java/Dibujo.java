@@ -861,7 +861,75 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(90+x, 50+y, 25+x, -20+y, 5+x, 30+y);
                     x = x + 50;
                 }
-
+                if(".".equals(letra)){
+                    curve.moveTo(5+x, 65+y);
+                    curve.curveTo(2+x, 67+y, 2+x, 68+y, 5+x, 70+y);
+                    curve.curveTo(7+x, 68+y, 7+x, 67+y, 5+x, 65+y);
+                    x=x+50;
+                }
+                if("...".equals(letra)){
+                    curve.moveTo(5+x, 65+y);
+                    curve.curveTo(2+x, 67+y, 2+x, 68+y, 5+x, 70+y);
+                    curve.curveTo(7+x, 68+y, 7+x, 67+y, 5+x, 65+y);
+                    
+                    curve.moveTo(15+x, 65+y);
+                    curve.curveTo(12+x, 67+y, 12+x, 68+y, 15+x, 70+y);
+                    curve.curveTo(17+x, 68+y, 17+x, 67+y, 15+x, 65+y);
+                    
+                    curve.moveTo(25+x, 65+y);
+                    curve.curveTo(22+x, 67+y, 22+x, 68+y, 25+x, 70+y);
+                    curve.curveTo(27+x, 68+y, 27+x, 67+y, 25+x, 65+y);
+                    
+                    x=x+50;
+                }
+                if(":".equals(letra)){
+                    curve.moveTo(5+x, 65+y);
+                    curve.curveTo(2+x, 67+y, 2+x, 68+y, 5+x, 70+y);
+                    curve.curveTo(7+x, 68+y, 7+x, 67+y, 5+x, 65+y);
+                    
+                    curve.moveTo(5+x, 45+y);
+                    curve.curveTo(2+x, 47+y, 2+x, 48+y, 5+x, 50+y);
+                    curve.curveTo(7+x, 48+y, 7+x, 47+y, 5+x, 45+y);
+                    x=x+50;
+                }
+                if(",".equals(letra)){
+                    curve.moveTo(5+x,70+y);
+                    curve.curveTo(6+x, 71+y, 3+x, 73+y, 2+x, 80+y);
+                    x=x+50;
+                }
+                if(";".equals(letra)){
+                    curve.moveTo(5+x, 65+y);
+                    curve.curveTo(2+x, 67+y, 2+x, 68+y, 5+x, 70+y);
+                    curve.curveTo(7+x, 68+y, 7+x, 67+y, 5+x, 65+y);
+                    curve.moveTo(5+x,75+y);
+                    curve.curveTo(4+x, 76+y, 3+x, 78+y, 2+x, 80+y);
+                    x=x+50;
+                }
+                if(" ' ".equals(letra)){
+                    curve.moveTo(5+x, 0+y);
+                    curve.curveTo(4+x, 4+y, 2+x, 7+y, 0+x, 10+y);
+                    x=x+5;
+                }
+                /*if( """.equals(letra)){
+                    curve.moveTo(5+x, 0+y);
+                    curve.curveTo(4+x, 4+y, 2+x, 7+y, 0+x, 10+y);
+                    curve.moveTo(5+x, 0+y);
+                    curve.curveTo(9+x, 4+y, 7+x, 7+y, 0+x, 5+y);
+                    x=x+5;
+                }*/
+                //comillas españolas
+                if("<".equals(letra)){
+                    curve.moveTo(15+x, 30+y);
+                    curve.lineTo(0+x,40+y);
+                    curve.lineTo(15+x,50+y);
+                    x=x+10;
+                }
+                if(">".equals(letra)){
+                    curve.moveTo(0+x, 30+y);
+                    curve.lineTo(15+x,40+y);
+                    curve.lineTo(0+x,50+y);
+                    x=x+10;
+                }
                 if (" ".equals(letra)){//reconoce los espacios para hacer un salto entre letras
                     x = x + 50;
                 }
