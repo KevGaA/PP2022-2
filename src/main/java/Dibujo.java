@@ -56,7 +56,7 @@ public class Dibujo extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 1180, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -159,8 +159,7 @@ public class Dibujo extends javax.swing.JFrame {
         Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
         Path2D.Double curve = new Path2D.Double();
         g2d.setColor(Color.BLACK);
-        
-        
+        jPanel1.update(g2d);
         //implementacion colores en los dibujos 
         if(Rojo.isSelected()){
             g2d.setColor(Color.RED);
@@ -890,12 +889,13 @@ public class Dibujo extends javax.swing.JFrame {
                 if (" ".equals(letra)){//reconoce los espacios para hacer un salto entre letras
                     x = x + 50;
                 }
-            }if (x>=1100){
+            }
+            if (x>=1100){
                 y = y+90;
                 x = 0;
             }
         }
-        jPanel1.update(g2d);
+        
         g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz  
     }//GEN-LAST:event_palabraKeyReleased
 
