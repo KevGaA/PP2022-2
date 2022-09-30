@@ -17,9 +17,7 @@ public class Dibujo extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         palabra = new javax.swing.JTextField();
-        button = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        limpiar = new javax.swing.JButton();
         Rojo = new javax.swing.JCheckBox();
         Azul = new javax.swing.JCheckBox();
         Verde = new javax.swing.JCheckBox();
@@ -43,16 +41,9 @@ public class Dibujo extends javax.swing.JFrame {
                 palabraActionPerformed(evt);
             }
         });
-
-        button.setText("Confirmar");
-        button.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                buttonMouseClicked(evt);
-            }
-        });
-        button.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonActionPerformed(evt);
+        palabra.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                palabraKeyReleased(evt);
             }
         });
 
@@ -66,18 +57,6 @@ public class Dibujo extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 486, Short.MAX_VALUE)
         );
-
-        limpiar.setText("Limpiar");
-        limpiar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                limpiarMouseClicked(evt);
-            }
-        });
-        limpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                limpiarActionPerformed(evt);
-            }
-        });
 
         Rojo.setText("Rojo");
 
@@ -108,21 +87,17 @@ public class Dibujo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jLabel1))
+                                .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(63, 63, 63)
+                                .addGap(172, 172, 172)
                                 .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(button)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(limpiar)))
-                        .addGap(111, 111, 111)
+                                .addGap(71, 71, 71)
+                                .addComponent(jLabel1)))
+                        .addGap(91, 91, 91)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(Verde)
@@ -140,10 +115,9 @@ public class Dibujo extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(morado)
                                     .addComponent(cafe))))
-                        .addContainerGap(73, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addGap(0, 67, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,12 +130,8 @@ public class Dibujo extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(button)
-                                .addComponent(limpiar))
-                            .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCheckBox1)
@@ -185,12 +155,7 @@ public class Dibujo extends javax.swing.JFrame {
     private void palabraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabraActionPerformed
     }//GEN-LAST:event_palabraActionPerformed
 
-    private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
-        String text = palabra.getText();//guarda en una variable de tipo string la palabra ingresada que originalmente es de tipo textfield   
-        System.out.println("La palabra ingresada es: "+text);
-    }//GEN-LAST:event_buttonActionPerformed
-
-    private void buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseClicked
+    private void palabraKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_palabraKeyReleased
         //librerias utilizadas para poder dibujar
         Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
         Path2D.Double curve = new Path2D.Double();
@@ -938,17 +903,9 @@ public class Dibujo extends javax.swing.JFrame {
                 x = 0;
             }
         }
-        g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz     
-    }//GEN-LAST:event_buttonMouseClicked
-
-    private void limpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarActionPerformed
-        // posible boton qu el se encargue de limpiar el panel principal
-    }//GEN-LAST:event_limpiarActionPerformed
-
-    private void limpiarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_limpiarMouseClicked
-        //limpia el panel del dibujo
-        jPanel1.updateUI();
-    }//GEN-LAST:event_limpiarMouseClicked
+        jPanel1.update(g2d);
+        g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz  
+    }//GEN-LAST:event_palabraKeyReleased
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -966,7 +923,6 @@ public class Dibujo extends javax.swing.JFrame {
     private javax.swing.JCheckBox Cian;
     private javax.swing.JCheckBox Rojo;
     private javax.swing.JCheckBox Verde;
-    private javax.swing.JButton button;
     private javax.swing.JCheckBox cafe;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
@@ -974,7 +930,6 @@ public class Dibujo extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton limpiar;
     private javax.swing.JCheckBox morado;
     private javax.swing.JTextField palabra;
     // End of variables declaration//GEN-END:variables
