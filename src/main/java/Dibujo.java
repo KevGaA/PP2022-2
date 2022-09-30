@@ -26,10 +26,12 @@ public class Dibujo extends javax.swing.JFrame {
         Amarillo = new javax.swing.JCheckBox();
         jCheckBox1 = new javax.swing.JCheckBox();
         cafe = new javax.swing.JCheckBox();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setMaximumSize(getPreferredSize());
+        setMinimumSize(null);
+        setSize(new java.awt.Dimension(800, 600));
 
         jLabel1.setFont(new java.awt.Font("Segoe Script", 0, 18)); // NOI18N
         jLabel1.setText("TRANSFORMADOR DE TEXTO");
@@ -47,6 +49,9 @@ public class Dibujo extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setMaximumSize(new java.awt.Dimension(1270, 720));
+        jPanel1.setPreferredSize(new java.awt.Dimension(0, 800));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -55,7 +60,7 @@ public class Dibujo extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 486, Short.MAX_VALUE)
+            .addGap(0, 514, Short.MAX_VALUE)
         );
 
         Rojo.setText("Rojo");
@@ -74,28 +79,22 @@ public class Dibujo extends javax.swing.JFrame {
 
         cafe.setText("Naranjo");
 
-        jMenu1.setText("Colores");
-        jMenuBar1.add(jMenu1);
-
-        setJMenuBar(jMenuBar1);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
+                                .addGap(12, 12, 12)
                                 .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(172, 172, 172)
+                                .addGap(178, 178, 178)
                                 .addComponent(jLabel2))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(71, 71, 71)
+                                .addGap(77, 77, 77)
                                 .addComponent(jLabel1)))
                         .addGap(91, 91, 91)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,16 +114,16 @@ public class Dibujo extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(morado)
                                     .addComponent(cafe))))
-                        .addGap(0, 67, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 445, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -194,7 +193,7 @@ public class Dibujo extends javax.swing.JFrame {
             //guarda en la variable aux letra por letra una variable tipo char la cual luego es modificada por una de tipo string y guardada en la variable letra
             aux = text.charAt(i);
             String letra = Character.toString(aux);
-            if (x<1200){
+            if (x<1100){
                 if ("a".equals(letra)){//listo
                     curve.moveTo(0+x, 70+y);
                     curve.curveTo(10+x, 70+y, 20+x, 65+y, 20+x, 50+y);
@@ -485,7 +484,6 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(10+x, 100+y, 30+x, 80+y, 40+x, 70+y);
                     x = x + 40;
                 }
-
                 //MAYUSCULAS
                 
                 if ("A".equals(letra)){//Dibujar A
@@ -534,7 +532,6 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(5+x,5+y,9+x,24+y,20+x,10+y); 
                     x=x+60;
                 }
-                
                 if ("E".equals(letra)){//Dibujar D
                     curve.moveTo(60+x,0+y);
                     curve.curveTo(48+x,8+y,53+x,19+y,60+x,9+y);
@@ -544,7 +541,6 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(18+x,42,20+x,65,70+x,70); 
                     x=x+60;
                 }
-                
                 if ("F".equals(letra)){//Dibujar F
                     curve.moveTo(80+x,0+y);
                     curve.curveTo(63+x,9+y,27+x,2+y,10+x,10+y);
@@ -560,7 +556,6 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.lineTo(42+x,42+y);
                     x=x+60;
                 }
-                
                 if ("G".equals(letra)){//Dibujar g
                     curve.moveTo(60+x,10+y);
                     curve.curveTo(36+x,3+y,21+x,18+y,20+x,40+y);
@@ -597,9 +592,6 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(41+x,68+y,59+x,70+y,70+x,70+y); 
                     x=x+60;
                 }
-                
-
-
                 if ("J".equals(letra)){//Dibujar J
                     curve.moveTo(0+x, 20+y);
                     curve.curveTo(20+x, 5+y, 40+x, 30+y, 60+x, 20+y);
@@ -675,14 +667,14 @@ public class Dibujo extends javax.swing.JFrame {
                     x=x+80;
                 }
                 if ("P".equals(letra)) {
-                curve.moveTo(5+x, 15+y);
-                curve.curveTo(10+x,15+y , 25+x,10+y, 20+x,7+y);
-                curve.curveTo(12+x, 5+y, 8+x, 10+y, 20+x, 10+y);
-                curve.curveTo(45+x, 10+y, 45+x, 35+y, 20+x, 40+y);
-                curve.lineTo(20+x, 7+y);
-                curve.lineTo(20+x, 70+y);
-                curve.curveTo(25+x, 70+y, 30+x, 75+y, 45+x, 70+y);
-                x=x+45;
+                    curve.moveTo(5+x, 15+y);
+                    curve.curveTo(10+x,15+y , 25+x,10+y, 20+x,7+y);
+                    curve.curveTo(12+x, 5+y, 8+x, 10+y, 20+x, 10+y);
+                    curve.curveTo(45+x, 10+y, 45+x, 35+y, 20+x, 40+y);
+                    curve.lineTo(20+x, 7+y);
+                    curve.lineTo(20+x, 70+y);
+                    curve.curveTo(25+x, 70+y, 30+x, 75+y, 45+x, 70+y);
+                    x=x+45;
                 }
 
                 if ("Q".equals(letra)) {
@@ -898,7 +890,7 @@ public class Dibujo extends javax.swing.JFrame {
                 if (" ".equals(letra)){//reconoce los espacios para hacer un salto entre letras
                     x = x + 50;
                 }
-            }else{
+            }if (x>=1100){
                 y = y+90;
                 x = 0;
             }
@@ -913,7 +905,6 @@ public class Dibujo extends javax.swing.JFrame {
                 new Dibujo().setVisible(true);
             }
         });
-        
     }
 
     
@@ -927,8 +918,6 @@ public class Dibujo extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JCheckBox morado;
     private javax.swing.JTextField palabra;
