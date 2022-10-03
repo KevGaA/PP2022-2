@@ -536,8 +536,8 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(48+x,8+y,53+x,19+y,60+x,9+y);
                     curve.moveTo(60+x,9+y);
                     curve.curveTo(30+x,0+y,15+x,23+y,50+x,35+y);
-                    curve.moveTo(50+x,35);
-                    curve.curveTo(18+x,42,20+x,65,70+x,70); 
+                    curve.moveTo(50+x,35+y);
+                    curve.curveTo(18+x,42+y,20+x,65+y,70+x,70+y); 
                     x=x+60;
                 }
                 if ("F".equals(letra)){//Dibujar F
@@ -742,7 +742,7 @@ public class Dibujo extends javax.swing.JFrame {
                 }
                 if("Y".equals(letra)){
                     curve.moveTo(0+x, 10+y);
-                    curve.curveTo(25+x, 0+y, 0+x, 74+y, 32+x, 70);
+                    curve.curveTo(25+x, 0+y, 0+x, 74+y, 32+x, 70+y);
                     curve.moveTo(32+x, 70+y);
                     curve.curveTo(50+x, 74+y, 39+x, 15+y, 43+x, 10+y);
                     curve.curveTo(43+x, 60+y, 50+x, 140+y, 28+x, 120+y);
