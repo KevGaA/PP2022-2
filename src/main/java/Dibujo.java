@@ -952,7 +952,7 @@ public class Dibujo extends javax.swing.JFrame {
         
         if(Color==null){
             Color = Color.white;
-            g2d.setColor(Color);
+            //g2d.setColor(Color);
         }
         
         jPanel1.setBackground(Color);  
