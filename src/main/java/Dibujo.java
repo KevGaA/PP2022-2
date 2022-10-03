@@ -2,9 +2,11 @@
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Path2D;
+import javax.swing.JColorChooser;
 
 public class Dibujo extends javax.swing.JFrame {
     
+    private Color Color;
     String aux;
     public Dibujo() {
         initComponents();
@@ -26,6 +28,7 @@ public class Dibujo extends javax.swing.JFrame {
         Amarillo = new javax.swing.JCheckBox();
         jCheckBox1 = new javax.swing.JCheckBox();
         cafe = new javax.swing.JCheckBox();
+        color = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -49,6 +52,7 @@ public class Dibujo extends javax.swing.JFrame {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMaximumSize(new java.awt.Dimension(1270, 720));
         jPanel1.setPreferredSize(new java.awt.Dimension(0, 800));
 
@@ -56,7 +60,7 @@ public class Dibujo extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1180, Short.MAX_VALUE)
+            .addGap(0, 1174, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,6 +82,13 @@ public class Dibujo extends javax.swing.JFrame {
         jCheckBox1.setText("Negro");
 
         cafe.setText("Naranjo");
+
+        color.setText("Color");
+        color.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                colorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,10 +123,14 @@ public class Dibujo extends javax.swing.JFrame {
                                     .addComponent(Cian))
                                 .addGap(30, 30, 30)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(morado)
-                                    .addComponent(cafe))))
-                        .addGap(0, 445, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE))
+                                    .addComponent(cafe)
+                                    .addComponent(morado))))
+                        .addGap(85, 85, 85)
+                        .addComponent(color, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1174, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -124,7 +139,7 @@ public class Dibujo extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 514, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -144,7 +159,8 @@ public class Dibujo extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(Verde)
-                            .addComponent(Amarillo))))
+                            .addComponent(Amarillo)))
+                    .addComponent(color, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -928,6 +944,20 @@ public class Dibujo extends javax.swing.JFrame {
         g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz  
     }//GEN-LAST:event_palabraKeyReleased
 
+    private void colorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_colorActionPerformed
+        // select color code 
+        Color = Color.BLACK;
+        
+        Color = JColorChooser.showDialog(this,"select a color", Color);
+        
+        if(Color==null){
+            Color = Color.white;
+            g2d.setColor(Color);
+        }
+        
+        jPanel1.setBackground(Color);  
+    }//GEN-LAST:event_colorActionPerformed
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -944,6 +974,7 @@ public class Dibujo extends javax.swing.JFrame {
     private javax.swing.JCheckBox Rojo;
     private javax.swing.JCheckBox Verde;
     private javax.swing.JCheckBox cafe;
+    private javax.swing.JToggleButton color;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
