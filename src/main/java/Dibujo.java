@@ -788,6 +788,18 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.lineTo(25+x, 70+y);
                     x = x + 30;
                 } 
+                if("{".equals(letra)){
+                    curve.moveTo(25+x, 0+y);
+                    curve.curveTo(10+x, 0+y, 15+x, 40+y, 5+x, 35+y);
+                    curve.curveTo(20+x, 35+y, 10+x, 70+y, 25+x, 70+y);
+                    x = x + 35;
+                } 
+                if("}".equals(letra)){
+                    curve.moveTo(0+x, 0+y);
+                    curve.curveTo(15+x, 0+y, 10+x, 40+y, 20+x, 35+y);
+                    curve.curveTo(5+x, 35+y, 15+x, 70+y, 0+x, 70+y);
+                    x = x + 35;
+                } 
                 if("]".equals(letra)){
                     curve.moveTo(10+x, 0+y);
                     curve.lineTo(25+x, 0+y);
@@ -795,7 +807,24 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.lineTo(10+x, 70+y);
                     x = x + 30;
                 }
+                if("!".equals(letra)){ //falta punto del signo
+                    curve.moveTo(25+x, 90+y);
+                    curve.curveTo(20+x, 91+y, 20+x, 99+y, 25+x, 100+y);
+                    curve.curveTo(30+x, 99+y, 30+x, 91+y, 25+x, 90+y);
 
+                    curve.moveTo(25+x, 80+y);
+                    curve.lineTo(25+x, 10+y);
+                    x = x + 40;
+                }
+                if("¡".equals(letra)){ //falta punto del signo
+                    curve.moveTo(25+x, 10+y);
+                    curve.curveTo(20+x, 11+y, 20+x, 19+y, 25+x, 20+y);
+                    curve.curveTo(30+x,19+y, 30+x, 11+y, 25+x, 10+y);
+
+                    curve.moveTo(25+x, 30+y);
+                    curve.lineTo(25+x, 90+y);
+                    x = x + 40;
+                }
                 if("¿".equals(letra)){ //falta punto del signo
                     curve.moveTo(25+x, 10+y);
                     curve.curveTo(20+x, 11+y, 20+x, 19+y, 25+x, 20+y);
@@ -806,7 +835,6 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(-30+x, 90+y, 45+x, 140+y, 45+x, 90+y);
                     x = x + 50;
                 }
-
                 if("?".equals(letra)){ //falta punto del signo
                     curve.moveTo(25+x, 100+y);
                     curve.curveTo(20+x, 101+y, 20+x, 109+y, 25+x, 110+y);
@@ -861,7 +889,7 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(4+x, 76+y, 3+x, 78+y, 2+x, 80+y);
                     x=x+50;
                 }
-                if(" ' ".equals(letra)){
+                if("'".equals(letra)){
                     curve.moveTo(5+x, 0+y);
                     curve.curveTo(4+x, 4+y, 2+x, 7+y, 0+x, 10+y);
                     x=x+5;
@@ -874,17 +902,18 @@ public class Dibujo extends javax.swing.JFrame {
                     x=x+5;
                 }*/
                 //comillas españolas
+                
                 if("<".equals(letra)){
                     curve.moveTo(15+x, 30+y);
                     curve.lineTo(0+x,40+y);
                     curve.lineTo(15+x,50+y);
-                    x=x+10;
+                    x=x+15;
                 }
                 if(">".equals(letra)){
                     curve.moveTo(0+x, 30+y);
                     curve.lineTo(15+x,40+y);
                     curve.lineTo(0+x,50+y);
-                    x=x+10;
+                    x=x+15;
                 }
                 if (" ".equals(letra)){//reconoce los espacios para hacer un salto entre letras
                     x = x + 50;
