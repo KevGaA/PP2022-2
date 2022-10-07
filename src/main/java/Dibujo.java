@@ -1,4 +1,5 @@
 //git
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.geom.Path2D;
@@ -29,6 +30,7 @@ public class Dibujo extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         cafe = new javax.swing.JCheckBox();
         color = new javax.swing.JToggleButton();
+        negrita = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -82,6 +84,11 @@ public class Dibujo extends javax.swing.JFrame {
         jCheckBox1.setText("Negro");
 
         cafe.setText("Naranjo");
+        cafe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cafeActionPerformed(evt);
+            }
+        });
 
         color.setText("Color");
         color.addActionListener(new java.awt.event.ActionListener() {
@@ -89,6 +96,8 @@ public class Dibujo extends javax.swing.JFrame {
                 colorActionPerformed(evt);
             }
         });
+
+        negrita.setText("negrita");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,33 +108,37 @@ public class Dibujo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(178, 178, 178)
+                                        .addComponent(jLabel2))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(77, 77, 77)
+                                        .addComponent(jLabel1)))
+                                .addGap(91, 91, 91)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Azul)
+                                            .addComponent(jCheckBox1))
+                                        .addGap(3, 3, 3)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(Rojo)
+                                            .addComponent(Cian))
+                                        .addGap(30, 30, 30)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(cafe)
+                                            .addComponent(morado)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(Verde)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Amarillo))))
+                            .addGroup(layout.createSequentialGroup()
                                 .addGap(12, 12, 12)
-                                .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(178, 178, 178)
-                                .addComponent(jLabel2))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(77, 77, 77)
-                                .addComponent(jLabel1)))
-                        .addGap(91, 91, 91)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(Verde)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Amarillo))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Azul)
-                                    .addComponent(jCheckBox1))
-                                .addGap(3, 3, 3)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Rojo)
-                                    .addComponent(Cian))
-                                .addGap(30, 30, 30)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cafe)
-                                    .addComponent(morado))))
-                        .addGap(85, 85, 85)
+                                .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(negrita)))
+                        .addGap(82, 82, 82)
                         .addComponent(color, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
@@ -145,7 +158,9 @@ public class Dibujo extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(palabra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(negrita)))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jCheckBox1)
@@ -164,18 +179,25 @@ public class Dibujo extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        palabra.getAccessibleContext().setAccessibleDescription("");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void palabraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabraActionPerformed
-    }//GEN-LAST:event_palabraActionPerformed
 
     private void palabraKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_palabraKeyReleased
         //librerias utilizadas para poder dibujar
         Graphics2D g2d = (Graphics2D)jPanel1.getGraphics();
         Path2D.Double curve = new Path2D.Double();
         g2d.setColor(Color.BLACK);
+        
+        //negrita
+        //g2d.setStroke(new BasicStroke(3.0f));
+        
         jPanel1.update(g2d);
+        
+        if(negrita.isSelected()){
+            g2d.setStroke(new BasicStroke(3.0f));
+        }
         //implementacion colores en los dibujos 
         if(Rojo.isSelected()){
             g2d.setColor(Color.RED);
@@ -201,12 +223,14 @@ public class Dibujo extends javax.swing.JFrame {
         
         //declaracion de variables
         char aux;
+        
         String text = palabra.getText();//convierte la variable de textfield en un string
         int x=0,y=0;//posiciones iniciales
         
         for (int i = 0; i < text.length(); i++) {
             //guarda en la variable aux letra por letra una variable tipo char la cual luego es modificada por una de tipo string y guardada en la variable letra
             aux = text.charAt(i);
+            //StringBuilder caret = new StringBuilder(aux);
             String letra = Character.toString(aux);
             if (x<1100){
                 if ("a".equals(letra)){//listo
@@ -910,15 +934,14 @@ public class Dibujo extends javax.swing.JFrame {
                     curve.curveTo(4+x, 4+y, 2+x, 7+y, 0+x, 10+y);
                     x=x+5;
                 }
-                /*if( """.equals(letra)){
+                if( "\"".equals(letra)){
                     curve.moveTo(5+x, 0+y);
                     curve.curveTo(4+x, 4+y, 2+x, 7+y, 0+x, 10+y);
-                    curve.moveTo(5+x, 0+y);
-                    curve.curveTo(9+x, 4+y, 7+x, 7+y, 0+x, 5+y);
+                    curve.moveTo(10+x, 0+y);
+                    curve.curveTo(9+x, 4+y, 7+x, 7+y, 5+x, 10+y);
                     x=x+5;
-                }*/
+                }
                 //comillas españolas
-                
                 if("<".equals(letra)){
                     curve.moveTo(15+x, 30+y);
                     curve.lineTo(0+x,40+y);
@@ -933,6 +956,9 @@ public class Dibujo extends javax.swing.JFrame {
                 }
                 if (" ".equals(letra)){//reconoce los espacios para hacer un salto entre letras
                     x = x + 50;
+                }//validacio para poder escribir en negritas
+                if("^N".contentEquals(letra)){
+                    g2d.setStroke(new BasicStroke(3.0f));
                 }
             }
             if (x>=1100){
@@ -940,7 +966,6 @@ public class Dibujo extends javax.swing.JFrame {
                 x = 0;
             }
         }
-        
         g2d.draw(curve);//dibuja la letra en el JPanel dentro de la interfaz  
     }//GEN-LAST:event_palabraKeyReleased
 
@@ -957,6 +982,14 @@ public class Dibujo extends javax.swing.JFrame {
         
         jPanel1.setBackground(Color);  
     }//GEN-LAST:event_colorActionPerformed
+
+    private void palabraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_palabraActionPerformed
+
+    private void cafeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cafeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cafeActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -980,6 +1013,7 @@ public class Dibujo extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JCheckBox morado;
-    private javax.swing.JTextField palabra;
+    private javax.swing.JCheckBox negrita;
+    public javax.swing.JTextField palabra;
     // End of variables declaration//GEN-END:variables
 }
