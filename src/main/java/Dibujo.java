@@ -84,11 +84,6 @@ public class Dibujo extends javax.swing.JFrame {
         jCheckBox1.setText("Negro");
 
         cafe.setText("Naranjo");
-        cafe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cafeActionPerformed(evt);
-            }
-        });
 
         color.setText("Color");
         color.addActionListener(new java.awt.event.ActionListener() {
@@ -986,10 +981,6 @@ public class Dibujo extends javax.swing.JFrame {
     private void palabraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_palabraActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_palabraActionPerformed
-
-    private void cafeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cafeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cafeActionPerformed
 
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
