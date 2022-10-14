@@ -2,15 +2,12 @@
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.event.ActionEvent;
-import java.awt.event.KeyEvent;
 import java.awt.geom.Path2D;
 import javax.swing.JColorChooser;
 
 public class Dibujo extends javax.swing.JFrame {
     
     private Color Color;
-    String aux;
     public Dibujo() {
         initComponents();
     }
@@ -194,11 +191,7 @@ public class Dibujo extends javax.swing.JFrame {
         
         boolean Subr;
         
-        if(subrayado.isSelected()){
-            Subr=true;
-        }else{
-            Subr = false;
-        }
+        Subr = subrayado.isSelected();
         
         if(negrita.isSelected()){//sleeccionar el boton para que comienze a escribir en negritas
             g2d.setStroke(new BasicStroke(3.0f));
@@ -1089,6 +1082,6 @@ public class Dibujo extends javax.swing.JFrame {
     private javax.swing.JCheckBox morado;
     private javax.swing.JRadioButton negrita;
     public javax.swing.JTextField palabra;
-    private javax.swing.JRadioButton subrayado;
+    public javax.swing.JRadioButton subrayado;
     // End of variables declaration//GEN-END:variables
 }
